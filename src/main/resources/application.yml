@@ -1,1 +1,6 @@
-
+#configuration de la db mongo
+data:
+  mongodb:
+    host: localhost
+    port: 27017
+    database: teamsmanager
