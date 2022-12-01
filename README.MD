@@ -15,7 +15,7 @@ Ce projet permet de gérer une équipe de personnes avec des compétences diffé
 
 ### Installation de la base de données
 
-Dans un terminal, exécutez la commande suivante:
+Dans un terminal, exécutez la commande suivante :
 
 ```bash
 docker-compose up -d
@@ -26,9 +26,17 @@ Dans votre IDE, chargez le projet Maven `pom.xml`.
 
 ## Utilisation
 
-### Lancement de l'application
+### Lancement de l'application sans IDE
 
-Dans votre IDE, lancez la classe `com.example.demo.DemoApplication`.
+Pour lancer l'application, il faut se placer dans le dossier 'teamsmanager' et lancer la commande :
+
+```bash
+./mvnw bootRun
+```
+
+### Lancement de l'application avec un IDE
+
+Dans votre IDE, lancez la classe `fr.ropi.spring.teamsmanager.TeamsmanagerApplication`.
 
 ### Utilisation de l'application
 
