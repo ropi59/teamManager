@@ -9,9 +9,9 @@ import java.util.List;
 @RequestMapping("/persons")
 public class PersonController {
 
-    private final PersonServiceImpl personService;
+    private final PersonService personService;
 
-    public PersonController(PersonServiceImpl personService) {
+    public PersonController(PersonService personService) {
         this.personService = personService;
     }
 
