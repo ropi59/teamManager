@@ -1,35 +1,31 @@
-package fr.ropi.spring.teamsmanager.persons;
+package fr.ropi.spring.teamsmanager.skills;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
-public class PersonServiceImpl implements PersonService {
+public class SkillServiceImpl implements SkillService {
 
-    private final PersonRepository repository;
+    private final SkillRepository repository;
 
-    public PersonServiceImpl(PersonRepository repository) {
+    public SkillServiceImpl(SkillRepository repository) {
         this.repository = repository;
     }
 
-    @Override
-    public List<Person> findAll() {
+    public List<Skill> findAll() {
         return repository.findAll();
     }
 
-    @Override
-    public Person save(Person entity) {
+    public Skill save(Skill entity) {
         return repository.save(entity);
     }
 
-    @Override
-    public Person findById(String id) {
+    public Skill findById(String id) {
         return repository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
 
-    @Override
     public void deleteById(String id) {
         repository.deleteById(id);
     }

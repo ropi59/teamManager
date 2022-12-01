@@ -1,35 +1,30 @@
-package fr.ropi.spring.teamsmanager.persons;
+package fr.ropi.spring.teamsmanager.teams;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
-public class PersonServiceImpl implements PersonService {
+public class TeamServiceImpl implements TeamService{
+    private final TeamRepository repository;
 
-    private final PersonRepository repository;
-
-    public PersonServiceImpl(PersonRepository repository) {
+    public TeamServiceImpl(TeamRepository repository) {
         this.repository = repository;
     }
 
-    @Override
-    public List<Person> findAll() {
+    public List<Team> findAll() {
         return repository.findAll();
     }
 
-    @Override
-    public Person save(Person entity) {
+    public Team save(Team entity) {
         return repository.save(entity);
     }
 
-    @Override
-    public Person findById(String id) {
+    public Team findById(String id) {
         return repository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
 
-    @Override
     public void deleteById(String id) {
         repository.deleteById(id);
     }
