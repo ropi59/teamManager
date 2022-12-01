@@ -14,6 +14,6 @@ public class Person {
 
     @Id
     private String id;
-    private String name;
-    private String firstname;
+    private String nom;
+    private String prenom;
 }
